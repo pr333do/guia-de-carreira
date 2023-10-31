@@ -39,7 +39,7 @@
       elem.onmousedown = dragMouseDown;
     }
 
-    function dragMouseDown(e) {
+    function dragMouseDown(e: MouseEvent) {
       e = e || window.event;
       e.preventDefault();
       // get the mouse cursor position at startup:
@@ -52,7 +52,7 @@
       document.onmousemove = elementDrag;
     }
 
-    function elementDrag(e) {
+    function elementDrag(e: MouseEvent) {
       e = e || window.event;
       e.preventDefault();
       // calculate the new cursor position:
