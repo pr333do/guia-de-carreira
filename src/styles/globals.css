@@ -10,6 +10,15 @@
     --foreground: 0 100% 100%;
   }
 
+  /* @media (prefers-color-scheme: dark) {
+    :root {
+      --bg-color-top: 222 76% 20%;
+      --bg-color-bottom: 215 55% 19%;
+      --background: radial-gradient(71.19% 100% at 50% 0%, rgba(0, 0, 0, 0.00) 0%, rgba(255, 255, 255, 0.33) 100%), linear-gradient(hsl(var(--bg-color-top)), hsl(var(--bg-color-bottom)));
+      --foreground: 0 100% 100%;
+    }
+  } */
+
 
   @font-face {
     font-family: 'Instrument';
@@ -38,7 +47,8 @@
   }
 
   body {
-    @apply bg-background text-foreground;
-    height: 100vh;
+    @apply bg-background text-foreground flex flex-col h-screen;
+
+    background-attachment: fixed;
   }
 }
