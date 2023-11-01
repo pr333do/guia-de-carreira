@@ -4,7 +4,16 @@ interface Props {
 }
 
 const { title } = Astro.props;
+
+const description =
+  "Descubra a carreira ideal em Ciência da Computação! O guia ajuda estudantes a identificar a carreira perfeita no vasto mundo da tecnologia. Comece sua jornada aqui.";
 ---
 
 <title>{title}</title>
-<meta name="description" content="Astro description" />
+<meta name="description" content={description} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={"https://guia-de-carreira.vercel.app"} />
+<meta property="og:image" content="/images/og.jpg" />
+<!-- <meta property="twitter:image" content="Twitter link preview image URL" /> -->
+<!-- <meta property="twitter:card" content="summary_large_image" /> -->
