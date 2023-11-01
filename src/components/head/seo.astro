@@ -7,6 +7,8 @@ const { title } = Astro.props;
 
 const description =
   "Descubra a carreira ideal em Ciência da Computação! O guia ajuda estudantes a identificar a carreira perfeita no vasto mundo da tecnologia. Comece sua jornada aqui.";
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const socialImageURL = new URL("/og/og.jpg", Astro.url);
 ---
 
 <title>{title}</title>
@@ -14,6 +16,7 @@ const description =
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:url" content={"https://guia-de-carreira.vercel.app"} />
-<meta property="og:image" content="/og/og.jpg" />
+<link rel="canonical" href={canonicalURL} />
+<meta property="og:image" content={socialImageURL} />
 <!-- <meta property="twitter:image" content="Twitter link preview image URL" /> -->
 <!-- <meta property="twitter:card" content="summary_large_image" /> -->
