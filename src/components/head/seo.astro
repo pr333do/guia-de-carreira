@@ -13,10 +13,15 @@ const socialImageURL = new URL("/og/og.jpg", Astro.url);
 
 <title>{title}</title>
 <meta name="description" content={description} />
+<link rel="canonical" href={canonicalURL} />
+
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:url" content={"https://guia-de-carreira.vercel.app"} />
-<link rel="canonical" href={canonicalURL} />
 <meta property="og:image" content={socialImageURL} />
-<!-- <meta property="twitter:image" content="Twitter link preview image URL" /> -->
-<!-- <meta property="twitter:card" content="summary_large_image" /> -->
+
+<meta property="twitter:title" content={title} />
+<meta property="twitter:description" content={description} />
+<meta property="twitter:image" content={socialImageURL} />
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:creator" content="@pr333do" />
